@@ -1,4 +1,6 @@
 <?php
+
+// DAY ONE
 // THIS IS EXAMPLE 1 
 
 class Flower {
@@ -129,5 +131,65 @@ $tv1­>brand = “samsung”;
 $tv1­>color = “black”;
 print “The Tv is {tv1­>getName()}.”;
 }
+
+// DAY TWO 
+// THIS IS EXAMPLE 1
+class flower {
+public $brand;
+public $color;
+public $amount;
+
+function __construct($title, $brand, $color, $amount) {
+$this­>brand = $brand;
+$this­>color = $color;
+$this­>amount = $amount;
+}
+	function getName() {
+	return “{$this­>brand}” .
+	“{$this­>color}”;
+	}
+}
+ 
+class phone {
+public $brand;
+public $color;
+public $type;
+function __construct($title, $brand, $color, $type) {
+$this­>brand = $brand;
+$this­>color = $color;
+$this­>type = $type;
+}
+	function getName() {
+	return “{$this­>brand}” .
+	“{$this­>color}”;
+	}
+}
+
+ 
+class tv {
+public $brand;
+public $color;
+public $amount;
+function __construct($title, $brand, $color, $amount) {
+$this­>brand = $brand;
+$this­>color = $color;
+$this­>amount = $amount;
+}
+	function getName() {
+	return “{$this­>brand}” .
+	“{$this­>color}”;
+	}
+}
+
+// EXAMPLE 2
+$flower1 = new flower(“yellow”, “daisy”, “Goldflower”);
+print “flower 1: {$flower1­>getName()}\n; 
+
+$phone1 = new phone(“white”, “iphone”, “ appleiphone6”);
+print “iphone 1: {$phone1­>getName()}\n; 
+
+$tv1 = new tv(“black”, “samsung”, “samsungtv”);
+print “tv 1: {$tv1­>getName()}\n; 
+
 
 ?> 
