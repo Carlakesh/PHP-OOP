@@ -16,18 +16,30 @@ class Person
 
 	function live()
 	{
-return " but i love being a  " . $this->firstname;
+return " but i love being a  " . $this->firstname . "<br />" . 
+	 " but i love being 1  " . $this->lastname . "<br />" .
+	 " but i love being 2 " . $this->gender . "<br />".
+	 " but i love being 3 " . $this->personality;
 	}
 }
-class Firstname extends Person {
-	function eyes() {
-		return $this->highschool;
-	}
-}
-$eyes = new Person("girl", "boy", "men", "women");
-print" sometimes i wish i was a boy " .$eyes->live();
+class Firstname extends Person 
+{
+		function __construct($firstname, $lastname, $gender, $personality)
+	{
 
-// NEW 
+parent::__construct($firstname, $lastname, $gender, $personality);
+	}
+
+	function eyes()
+	 {
+		return " mother yucker"	;
+	}
+}
+$motheryar = new firstname("girl", "boy", "men", "women");
+print $motheryar->live() . "<br />" ; 
+print $motheryar->eyes();
+
+// NEW   
 class Lana {
 	public $singer;
 	public $model;
@@ -40,16 +52,26 @@ class Lana {
 		$this->perfect = $perfect;
 	}
 	function getName() {
-		return "  she is " . $this->perfect;
+		return "  she is " . $this->perfect . "<br />" . 
+		"singer"    . $this->singer . "<br />" . 
+		"model "    . $this->model . "<br />" . 
+		"random"    . $this->random;
 	}
 }
 class perfect extends Lana {
-	function Lanadelrey() {
-		return $this->favorite;
+function __construct($singer, $model, $random, $perfect)
+	{
+		parent::__construct($singer, $model, $random, $perfect);
+	}
+
+	function Lanadelrey()
+	 {
+		return "perfection";
 	}
 }
-$favorite = new Lana("singer", "model", "random", "perfect");
-print " <br> my favorite singer is Lana" .$favorite->getName();
+$favorite = new perfect("singer", "model", "random", "perfect");
+print $favorite->getName() . "<br />";
+print $favorite->Lanadelrey();
 
 //New
 class Phone
@@ -67,14 +89,25 @@ class Phone
 	}
 	function breaks()
 	{
-		return "But i also love to look at my " . $this->Pictures;
+		return "But i also love to look at my " . $this->Pictures . "<br />".
+				"Apps "  . $this->Apps . "<br />" . 
+				"Games "    . $this->Games . "<br />" . 
+				"Calls " . $this->Calls;
 	}
 }
-class Calls extends Phone {
-	function playing() {
-		return $this->Games;
+class Calls extends Phone 
+{
+function __construct($Apps, $Games, $Pictures, $calls)
+	{
+		parent::__construct($Apps, $Games, $Pictures, $calls);
+	}
+
+	function playing() 
+	{
+		return "Games";
 	}
 }
-$playing = new Phone("Apps", "Games", "Pictures", "calls");
-print" <br>  i  love to " .$playing->breaks();
+$playing = new Calls("Apps", "Games", "Pictures", "calls");
+print $playing->getName() . "<br />";
+print $playing->playing();
 ?>
